@@ -6,8 +6,6 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import ListItem from "./component/list-item";
 import styles from "./styles";
-import { all } from "axios";
-
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [coordinations, setCoordinations] = useState([]);
@@ -27,7 +25,6 @@ const HomeScreen = () => {
                 }
               });
             }
-
             setCoordinations(newArr);
           } else {
             // alert("Internal server error");
